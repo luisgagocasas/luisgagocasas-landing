@@ -215,6 +215,19 @@ function App() {
           </div>
           <div className="footer-bottom">
             <span>© {new Date().getFullYear()} Luis Gago Casas</span>
+            <a
+              href="https://ayphu.com"
+              className="ayphu-shield"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="Sitio protegido por Ayphu Cloud"
+            >
+              <svg className="shield-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M10 1.5L2.5 4.5v5c0 4.142 3.134 7.82 7.5 8.5 4.366-.68 7.5-4.358 7.5-8.5v-5L10 1.5z" fill="currentColor" fillOpacity="0.18" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round"/>
+                <path d="M7 10l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              Protegido por Ayphu
+            </a>
             <span>luisgagocasas.com</span>
           </div>
         </div>

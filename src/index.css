@@ -614,6 +614,36 @@ section[id] { scroll-margin-top: var(--header-h); }
   justify-content: space-between;
   font-size: 0.75rem;
   color: rgba(255, 255, 255, 0.3);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.ayphu-shield {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #a78bfa;
+  background: rgba(124, 58, 237, 0.15);
+  border: 1px solid rgba(124, 58, 237, 0.35);
+  border-radius: 999px;
+  padding: 5px 14px 5px 10px;
+  transition: background 150ms, color 150ms, border-color 150ms;
+}
+.ayphu-shield:hover {
+  background: rgba(124, 58, 237, 0.28);
+  color: #c4b5fd;
+  border-color: rgba(124, 58, 237, 0.6);
+}
+
+.shield-icon {
+  width: 16px;
+  height: 16px;
+  color: #7c3aed;
+  flex-shrink: 0;
 }
 
 /* ── RESPONSIVE 1024px ──────────────────────── */
