@@ -1,0 +1,23 @@
+{
+  "name": "Luis Gago Casas",
+  "short_name": "LuisGC",
+  "description": "Sitio personal de Luis Gago Casas con enfoque en desarrollo web, APIs y productos digitales.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4efe7",
+  "theme_color": "#f4efe7",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

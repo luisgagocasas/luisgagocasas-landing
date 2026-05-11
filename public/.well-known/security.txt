@@ -1,0 +1,6 @@
+Contact: https://www.linkedin.com/in/luisgagocasas/
+Contact: https://github.com/luisgagocasas
+Expires: 2027-01-01T00:00:00.000Z
+Preferred-Languages: es, en
+Canonical: https://luisgagocasas.com/.well-known/security.txt
+Policy: https://luisgagocasas.com/.well-known/security.txt

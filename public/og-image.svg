@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Luis Gago Casas sitio personal</title>
+  <desc id="desc">Imagen social para compartir el sitio personal de Luis Gago Casas.</desc>
+  <defs>
+    <linearGradient id="bg" x1="84" x2="1114" y1="52" y2="596" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f5efe5" />
+      <stop offset="1" stop-color="#efe5d8" />
+    </linearGradient>
+    <linearGradient id="accent" x1="148" x2="1020" y1="140" y2="520" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#be6f3f" />
+      <stop offset="1" stop-color="#135c5a" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <circle cx="1024" cy="130" r="96" fill="#ffffff" fill-opacity="0.5" />
+  <circle cx="142" cy="560" r="188" fill="#ffffff" fill-opacity="0.4" />
+  <rect x="68" y="68" width="1064" height="494" rx="34" fill="#fffbf6" fill-opacity="0.72" stroke="#171717" stroke-opacity="0.08" />
+  <rect x="112" y="112" width="144" height="144" rx="28" fill="url(#accent)" />
+  <text x="184" y="198" text-anchor="middle" font-family="Manrope, Arial, sans-serif" font-size="56" font-weight="800" letter-spacing="10" fill="#fff9f4">LG</text>
+  <text x="112" y="330" font-family="Cormorant Garamond, Georgia, serif" font-size="92" font-weight="600" fill="#171717">Luis Gago Casas</text>
+  <text x="112" y="402" font-family="Manrope, Arial, sans-serif" font-size="30" font-weight="700" fill="#135c5a">Desarrollo web, APIs y productos digitales</text>
+  <text x="112" y="470" font-family="Manrope, Arial, sans-serif" font-size="28" fill="#3b3834">Sitio personal con enfoque en reputacion profesional, SEO tecnico y proyectos publicados.</text>
+  <text x="112" y="528" font-family="Manrope, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="4" fill="#59554e">LUISGAGOCASAS.COM</text>
+</svg>
