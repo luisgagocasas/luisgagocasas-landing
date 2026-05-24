@@ -1,6 +1,39 @@
+import { useState, useEffect } from 'react'
 import { contacts, experience, navLinks, profile, projects, skills } from './content/site'
 
+const ROLES = ['Desarrollador', 'CEO', 'CTO', 'DevOps', 'Fundador']
+
 function App() {
+  const [roleIndex, setRoleIndex] = useState(0)
+  const [displayedText, setDisplayedText] = useState('Desarrollador')
+  const [isDeleting, setIsDeleting] = useState(false)
+
+  useEffect(() => {
+    const current = ROLES[roleIndex]
+
+    if (!isDeleting && displayedText === current) {
+      const pause = setTimeout(() => setIsDeleting(true), 1800)
+      return () => clearTimeout(pause)
+    }
+
+    if (isDeleting && displayedText === '') {
+      setIsDeleting(false)
+      setRoleIndex((prev) => (prev + 1) % ROLES.length)
+      return
+    }
+
+    const speed = isDeleting ? 55 : 95
+    const timer = setTimeout(() => {
+      setDisplayedText(
+        isDeleting
+          ? current.slice(0, displayedText.length - 1)
+          : current.slice(0, displayedText.length + 1)
+      )
+    }, speed)
+
+    return () => clearTimeout(timer)
+  }, [displayedText, isDeleting, roleIndex])
+
   return (
     <div className="page-shell">
 
@@ -53,9 +86,11 @@ function App() {
             <div className="hero-left">
               <p className="hero-eyebrow">Arequipa, Perú — CEO &amp; CTO</p>
               <h1 className="hero-title">
-                SOFTWARE<sup>+</sup> CLOUD<sup>+</sup>
-                <br />
-                PRODUCTO<sup>+</sup> API<sup>+</sup>
+                <span className="hero-intro-label">Luis es:</span>
+                <span className="hero-typewriter">
+                  {displayedText}
+                  <span className="hero-cursor" aria-hidden="true" />
+                </span>
               </h1>
               <p className="hero-bio">{profile.intro}</p>
               <div className="hero-ctas">
@@ -102,8 +137,44 @@ function App() {
         </div>
       </section>
 
+      {/* ── PROYECTOS ─────────────────────────── */}
+      <section className="section section-soft" id="proyectos">
+        <div className="wrap">
+          <p className="section-tag">Proyectos</p>
+          <div className="projects-grid">
+            {projects.map((project) => (
+              <article className="project-card" key={project.name}>
+                <div className="project-top">
+                  <span className="project-label">{project.label}</span>
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="project-link"
+                  >
+                    ↗
+                  </a>
+                </div>
+                <h3>{project.name}</h3>
+                <p>{project.description}</p>
+                <ul className="stack-list">
+                  {project.stack.map((s) => (
+                    <li key={s}>{s}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+            <article className="project-card project-soon">
+              <span className="project-label">Próximamente</span>
+              <h3>Más proyectos</h3>
+              <p>Nuevos productos y herramientas en desarrollo continuo.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
       {/* ── EXPERIENCIA ───────────────────────── */}
-      <section className="section section-soft" id="experiencia">
+      <section className="section" id="experiencia">
         <div className="wrap">
           <p className="section-tag">Experiencia</p>
           <div className="exp-list">
@@ -138,42 +209,6 @@ function App() {
                 </div>
               </article>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── PROYECTOS ─────────────────────────── */}
-      <section className="section" id="proyectos">
-        <div className="wrap">
-          <p className="section-tag">Proyectos</p>
-          <div className="projects-grid">
-            {projects.map((project) => (
-              <article className="project-card" key={project.name}>
-                <div className="project-top">
-                  <span className="project-label">{project.label}</span>
-                  <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="project-link"
-                  >
-                    ↗
-                  </a>
-                </div>
-                <h3>{project.name}</h3>
-                <p>{project.description}</p>
-                <ul className="stack-list">
-                  {project.stack.map((s) => (
-                    <li key={s}>{s}</li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-            <article className="project-card project-soon">
-              <span className="project-label">Próximamente</span>
-              <h3>Más proyectos</h3>
-              <p>Nuevos productos y herramientas en desarrollo continuo.</p>
-            </article>
           </div>
         </div>
       </section>

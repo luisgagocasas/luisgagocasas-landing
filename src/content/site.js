@@ -5,7 +5,7 @@ export const profile = {
   intro:
     'Soy desarrollador de software con experiencia construyendo productos digitales desde cero. Fundo y dirijo Ayphu, una plataforma cloud orientada a empresas, y participo activamente en la comunidad BuildersAQP. Me especializo en desarrollo web, APIs, infraestructura cloud y automatización de despliegues.',
   summary:
-    'Con más de 7 años de experiencia en tecnología, he trabajado en desarrollo de software, consultoría IT, formación universitaria y construcción de productos SaaS. Combino visión técnica con capacidad de ejecución para llevar ideas a producción de forma eficiente.',
+    'Con más de 10 años de experiencia en tecnología, he trabajado en desarrollo de software, consultoría IT, formación universitaria y construcción de productos SaaS. Combino visión técnica con capacidad de ejecución para llevar ideas a producción de forma eficiente.',
   contactLabel: 'Conectar por LinkedIn',
   contactUrl: 'https://www.linkedin.com/in/luisgagocasas/',
   githubUrl: 'https://github.com/luisgagocasas',
@@ -13,17 +13,17 @@ export const profile = {
 
 export const skills = [
   'Desarrollo web',
-  'React',
-  'Node.js',
+  'React & Next.js',
+  'Node.js & Python',
   'APIs REST',
   'Cloud & DevOps',
   'Docker',
-  'Linux',
   'Ciberseguridad',
-  'SEO técnico',
-  'Next.js',
-  'Python',
-  'Bases de datos',
+  'Liderazgo técnico',
+  'Estrategia de producto',
+  'Gestión de equipos',
+  'Consultoría IT',
+  'Formación universitaria',
 ]
 
 export const experience = [
@@ -97,8 +97,8 @@ export const contacts = [
 
 export const navLinks = [
   { label: 'Sobre mí', href: '#sobre-mi' },
-  { label: 'Experiencia', href: '#experiencia' },
   { label: 'Proyectos', href: '#proyectos' },
+  { label: 'Experiencia', href: '#experiencia' },
   { label: 'Contacto', href: '#contacto' },
 ]
 
